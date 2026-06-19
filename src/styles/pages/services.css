@@ -1,0 +1,52 @@
+﻿.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.process-card {
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.process-card strong {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  background: #111111;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 6px;
+}
+
+.process-card h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.process-card p {
+  margin: 0;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+@media (max-width: 991px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+}

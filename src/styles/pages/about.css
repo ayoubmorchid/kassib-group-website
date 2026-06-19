@@ -1,0 +1,99 @@
+﻿.mission-card {
+  min-height: 100%;
+  padding: 32px;
+  border-radius: 8px;
+}
+
+.mission-card.dark {
+  background: var(--ink);
+}
+
+.mission-card.red {
+  background: var(--brand-red);
+}
+
+.mission-card svg {
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+.mission-card h3 {
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.mission-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.7;
+}
+
+.value-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  height: 100%;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.value-card strong {
+  flex: 0 0 auto;
+  color: rgba(215, 25, 32, 0.2);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.value-card h3 {
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.value-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.why-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 100%;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.why-card svg {
+  flex: 0 0 auto;
+  color: var(--brand-red);
+}
+
+.why-card span {
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .mission-card {
+    padding: 24px;
+  }
+
+  .value-card {
+    padding: 20px;
+  }
+
+  .value-card strong {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,29 @@
+@media (max-width: 991.98px) {
+  .portfolio-band,
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .mission-card,
+  .contact-panel,
+  .portfolio-band,
+  .featured-news .news-body {
+    padding: 24px;
+  }
+
+  .value-card {
+    gap: 16px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .footer-bottom div {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

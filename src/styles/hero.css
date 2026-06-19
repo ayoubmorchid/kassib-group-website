@@ -1,0 +1,178 @@
+﻿/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--ink);
+  padding: 9rem 0 7rem;
+}
+
+.hero-compact {
+  min-height: auto;
+  padding: 10rem 0 5.5rem;
+}
+
+.hero-bg,
+.hero-overlay,
+.hero-accent {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-bg {
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.22;
+  transform: scale(1.05);
+  transition: transform 8s ease;
+}
+
+.hero-overlay {
+  z-index: 1;
+  background:
+    linear-gradient(
+      110deg,
+      rgba(17, 17, 17, 0.97) 0%,
+      rgba(17, 17, 17, 0.88) 50%,
+      rgba(215, 25, 32, 0.28) 100%
+    ),
+    linear-gradient(
+      to top,
+      rgba(17, 17, 17, 0.78),
+      transparent 42%
+    );
+}
+
+.hero-accent {
+  z-index: 1;
+  width: 3px;
+  right: auto;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--brand-red),
+    transparent
+  );
+  opacity: 0.9;
+}
+
+.hero-section > .container {
+  position: relative;
+  z-index: 5;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.hero-content {
+  max-width: 760px;
+}
+
+.hero-section .section-eyebrow {
+  margin-bottom: 1.25rem;
+}
+
+.hero-section .section-title h1,
+.hero-section .section-title h2 {
+  color: #ffffff;
+  font-size: clamp(3rem, 6vw, 5.4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+}
+
+.hero-section .section-title p,
+.hero-section .lead-copy {
+  max-width: 650px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.hero-actions .btn-brand {
+  min-width: 210px;
+}
+
+.hero-actions .brand-outline {
+  min-width: 210px;
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+}
+
+.hero-actions .brand-outline:hover {
+  background: #ffffff;
+  color: var(--ink);
+  border-color: #ffffff;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 991px) {
+  .hero-section {
+    min-height: 850px;
+    padding: 8rem 0 5rem;
+  }
+
+  .hero-section .section-title h1,
+  .hero-section .section-title h2 {
+    font-size: clamp(2.8rem, 7vw, 4.2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 760px;
+    padding: 7rem 0 4rem;
+  }
+
+  .hero-section .section-title h1,
+  .hero-section .section-title h2 {
+    font-size: clamp(2.2rem, 8vw, 3.4rem);
+  }
+
+  .hero-section .section-title p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    min-height: 700px;
+    padding: 6.5rem 0 3.5rem;
+  }
+
+  .hero-section .section-title h1,
+  .hero-section .section-title h2 {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn,
+  .hero-actions .brand-outline {
+    width: 100%;
+  }
+}
