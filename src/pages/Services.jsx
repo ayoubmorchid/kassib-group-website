@@ -58,7 +58,7 @@ export default function Services() {
 
       <section className="section-padding">
         <div className="container">
-          <div className="row g-5 align-items-center">
+          <div className="row g-4 align-items-center">
             <div className="col-lg-6">
               <SectionTitle
                 eyebrow="The Kassib Difference"

@@ -1,11 +1,15 @@
-﻿.hero-section {
+﻿/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero-section {
   position: relative;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  min-height: 100vh;
-  padding: 9rem 0 7rem;
   overflow: hidden;
   background: var(--ink);
+  padding: 9rem 0 7rem;
 }
 
 .hero-compact {
@@ -22,11 +26,12 @@
 
 .hero-bg {
   z-index: 0;
-  background-position: center;
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.3;
-  transform: scale(1.02);
+  opacity: 0.22;
+  transform: scale(1.05);
+  transition: transform 8s ease;
 }
 
 .hero-overlay {
@@ -34,258 +39,140 @@
   background:
     linear-gradient(
       110deg,
-      rgba(17, 17, 17, 0.96) 0%,
-      rgba(17, 17, 17, 0.82) 48%,
-      rgba(215, 25, 32, 0.38) 100%
+      rgba(17, 17, 17, 0.97) 0%,
+      rgba(17, 17, 17, 0.88) 50%,
+      rgba(215, 25, 32, 0.28) 100%
     ),
     linear-gradient(
       to top,
-      rgba(17, 17, 17, 0.7),
+      rgba(17, 17, 17, 0.78),
       transparent 42%
     );
 }
 
 .hero-accent {
   z-index: 1;
-  right: auto;
   width: 3px;
+  right: auto;
   background: linear-gradient(
     to bottom,
     transparent,
     var(--brand-red),
     transparent
   );
+  opacity: 0.9;
 }
 
 .hero-section > .container {
   position: relative;
-  z-index: 2;
+  z-index: 5;
 }
 
-.section-title {
-  max-width: 740px;
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.hero-content {
+  max-width: 760px;
 }
 
-.section-title h1,
-.section-title h2 {
-  margin: 0;
-  color: var(--ink);
-  font-size: clamp(2rem, 4vw, 3.7rem);
-  font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: 0;
-}
-
-.section-title p,
-.lead-copy {
-  margin: 1.25rem 0 0;
-  color: var(--muted);
-  font-size: 1rem;
-  line-height: 1.8;
+.hero-section .section-eyebrow {
+  margin-bottom: 1.25rem;
 }
 
 .hero-section .section-title h1,
 .hero-section .section-title h2 {
-  max-width: 780px;
   color: #ffffff;
-  font-size: clamp(2.7rem, 6vw, 5.3rem);
+  font-size: clamp(3rem, 6vw, 5.4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
 }
 
 .hero-section .section-title p,
 .hero-section .lead-copy {
   max-width: 650px;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.05rem;
+  line-height: 1.9;
 }
 
-.hero-compact .section-title h1,
-.hero-compact .section-title h2 {
-  font-size: clamp(2.4rem, 5vw, 4.2rem);
-}
-
-.section-eyebrow {
+.hero-actions {
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-  color: var(--brand-red);
-  font-size: 0.74rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
-.section-eyebrow span {
-  display: inline-block;
-  flex: 0 0 auto;
-  width: 34px;
-  height: 2px;
-  background: var(--brand-red);
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.hero-actions .btn-brand {
+  min-width: 210px;
 }
 
-.text-white-65 {
-  color: rgba(255, 255, 255, 0.72) !important;
-}
-
-.brand-outline {
-  border-color: rgba(255, 255, 255, 0.45);
+.hero-actions .brand-outline {
+  min-width: 210px;
+  border-color: rgba(255, 255, 255, 0.4);
   color: #ffffff;
 }
 
-.brand-outline:hover,
-.brand-outline:focus {
+.hero-actions .brand-outline:hover {
   background: #ffffff;
-  border-color: #ffffff;
   color: var(--ink);
+  border-color: #ffffff;
 }
 
-/* Tablet */
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
 @media (max-width: 991px) {
   .hero-section {
-    min-height: 760px;
+    min-height: 850px;
     padding: 8rem 0 5rem;
   }
 
-  .hero-compact {
-    min-height: auto;
-    padding: 8rem 0 4rem;
-  }
-
-  .hero-bg {
-    transform: none;
-  }
-
   .hero-section .section-title h1,
   .hero-section .section-title h2 {
-    max-width: 680px;
-    font-size: clamp(2.5rem, 7vw, 4.2rem);
-  }
-
-  .hero-compact .section-title h1,
-  .hero-compact .section-title h2 {
-    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    font-size: clamp(2.8rem, 7vw, 4.2rem);
   }
 }
 
-/* Mobile */
-
 @media (max-width: 768px) {
   .hero-section {
-    min-height: 680px;
-    padding: 7.5rem 0 4rem;
-  }
-
-  .hero-compact {
-    min-height: auto;
-    padding: 7.5rem 0 3.5rem;
-  }
-
-  .hero-bg {
-    background-position: center;
-  }
-
-  .hero-overlay {
-    background:
-      linear-gradient(
-        90deg,
-        rgba(17, 17, 17, 0.96) 0%,
-        rgba(17, 17, 17, 0.86) 65%,
-        rgba(17, 17, 17, 0.68) 100%
-      ),
-      linear-gradient(
-        to top,
-        rgba(17, 17, 17, 0.72),
-        transparent 55%
-      );
-  }
-
-  .hero-accent {
-    width: 2px;
-  }
-
-  .section-title {
-    max-width: 100%;
+    min-height: 760px;
+    padding: 7rem 0 4rem;
   }
 
   .hero-section .section-title h1,
   .hero-section .section-title h2 {
-    max-width: 100%;
-    font-size: clamp(2.2rem, 9vw, 3.4rem);
-    line-height: 1.12;
+    font-size: clamp(2.2rem, 8vw, 3.4rem);
   }
 
-  .hero-compact .section-title h1,
-  .hero-compact .section-title h2 {
-    font-size: clamp(2rem, 8vw, 3rem);
-  }
-
-  .section-title p,
-  .lead-copy {
-    margin-top: 1rem;
-    font-size: 0.96rem;
-    line-height: 1.7;
-  }
-
-  .section-eyebrow {
-    gap: 0.6rem;
-    margin-bottom: 0.85rem;
-    font-size: 0.7rem;
-    letter-spacing: 0.12em;
-  }
-
-  .section-eyebrow span {
-    width: 26px;
+  .hero-section .section-title p {
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 576px) {
   .hero-section {
-    min-height: 620px;
-    padding: 6.8rem 0 3.5rem;
-  }
-
-  .hero-compact {
-    min-height: auto;
-    padding: 6.8rem 0 3rem;
-  }
-
-  .hero-bg {
-    background-position: 62% center;
+    min-height: 700px;
+    padding: 6.5rem 0 3.5rem;
   }
 
   .hero-section .section-title h1,
   .hero-section .section-title h2 {
     font-size: clamp(2rem, 10vw, 2.8rem);
-    line-height: 1.15;
   }
 
-  .hero-compact .section-title h1,
-  .hero-compact .section-title h2 {
-    font-size: clamp(1.9rem, 9vw, 2.6rem);
-  }
-
-  .section-title p,
-  .lead-copy {
-    font-size: 0.93rem;
-    line-height: 1.65;
-  }
-
-  .section-eyebrow {
-    font-size: 0.66rem;
-    letter-spacing: 0.1em;
-  }
-
-  .hero-section .d-flex.gap-3 {
-    width: 100%;
+  .hero-actions {
     flex-direction: column;
-    align-items: stretch;
   }
 
-  .hero-section .d-flex.gap-3 .btn {
-    width: 100%;
-  }
-
-  .brand-outline {
+  .hero-actions .btn,
+  .hero-actions .brand-outline {
     width: 100%;
   }
 }

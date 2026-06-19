@@ -43,7 +43,7 @@ export default function Home() {
 
       <section className="section-padding">
         <div className="container">
-          <div className="row align-items-center g-5">
+          <div className="row align-items-center g-4">
             <div className="col-lg-6">
               <div className="image-frame">
                 <img

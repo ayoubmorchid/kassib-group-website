@@ -1,7 +1,7 @@
 ﻿.mission-card {
   min-height: 100%;
   padding: 32px;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .mission-card.dark {
@@ -38,7 +38,7 @@
   padding: 24px;
   background: #ffffff;
   border: 1px solid var(--line);
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .value-card strong {

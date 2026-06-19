@@ -23,7 +23,7 @@ export default function About() {
 
       <section className="section-padding">
         <div className="container">
-          <div className="row align-items-center g-5">
+          <div className="row align-items-center g-4">
             <div className="col-lg-6">
               <SectionTitle
                 eyebrow="Our History"
@@ -99,7 +99,7 @@ export default function About() {
 
       <section className="section-padding bg-soft">
         <div className="container">
-          <div className="row g-5 align-items-center">
+          <div className="row g-4 align-items-center">
             <div className="col-lg-5">
               <SectionTitle
                 eyebrow="Why Choose Us"

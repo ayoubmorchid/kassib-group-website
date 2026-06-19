@@ -24,7 +24,7 @@ export default function Contact() {
 
       <section className="section-padding bg-soft">
         <div className="container">
-          <div className="row g-5 align-items-start">
+          <div className="row g-4 align-items-start">
             <div className="col-lg-4">
               <SectionTitle
                 eyebrow="Contact Information"
