@@ -1,14 +1,36 @@
-import { Award, CheckCircle2, Eye, Gem, Handshake, Lightbulb, Rocket } from "lucide-react";
+import {
+  Award,
+  CheckCircle2,
+  Eye,
+  Gem,
+  Handshake,
+  Lightbulb,
+  Rocket,
+} from "lucide-react";
 import Hero from "../components/sections/Hero";
 import CTASection from "../components/sections/CTASection";
 import SEO from "../components/SEO";
 import SectionTitle from "../components/ui/SectionTitle";
 
-const values = [
-  ["01", "Execution", "We focus on practical site delivery, reliable coordination, and respect for project requirements."],
-  ["02", "Transparency", "We keep tender files, estimates, invoices, attachments, suppliers, and stock follow-up organized."],
-  ["03", "Responsiveness", "We adapt to the needs of public authorities, local communities, and operational deadlines."],
-  ["04", "Public Value", "We support projects that improve facilities, mobility, water access, cleanliness, and local services."],
+const indicators = [
+  ["01", "Public works focus"],
+  ["02", "Construction & rehabilitation"],
+  ["03", "Tender and procurement follow-up"],
+  ["04", "Site, stock, and logistics coordination"],
+];
+
+const capabilities = [
+  [Lightbulb, "Tender Management", "Preparation, estimates, administrative follow-up, supplier situations, and project documentation."],
+  [Award, "Technical Execution", "Civil works, rehabilitation, finishing, infrastructure works, and coordinated site supervision."],
+  [Handshake, "Procurement Control", "Purchasing follow-up, supplier coordination, equipment needs, invoices, and purchase orders."],
+  [Gem, "Operational Logistics", "Stock tracking, material movement, equipment availability, and support for active construction sites."],
+];
+
+const workflow = [
+  ["Review", "Tender requirements, quantities, technical files, deadlines, and administrative obligations."],
+  ["Prepare", "Planning, procurement needs, supplier coordination, estimates, and execution resources."],
+  ["Execute", "Construction site coordination, rehabilitation works, logistics, supervision, and field reporting."],
+  ["Follow Up", "Attachments, invoices, stock movements, supplier situations, and project documentation."],
 ];
 
 export default function About() {
@@ -24,31 +46,35 @@ export default function About() {
         className="about-compact-hero"
         eyebrow="Who We Are"
         title="About Kassib Group"
-        text="A professional company working in public works, construction, rehabilitation, infrastructure, equipment supply, and tender follow-up."
+        text="A structured construction and public works company supporting projects through technical execution, tender management, procurement, logistics, and site coordination."
         image="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1500&h=800&fit=crop&auto=format"
       />
 
-      <section className="section-padding">
+      <section className="section-padding about-overview">
         <div className="container">
-          <div className="row align-items-center g-4">
-            <div className="col-lg-6">
+          <div className="row g-4 align-items-start">
+            <div className="col-lg-7">
               <SectionTitle
-                eyebrow="Our History"
-                title="Built around field execution and public project discipline."
-                text="Kassib Group's files show a company close to real operational needs: public tenders, rehabilitation works, road links, water infrastructure, municipal equipment, supplier situations, stock follow-up, estimates, attachments, and invoices."
+                eyebrow="Company Profile"
+                title="Built for practical delivery, not just paperwork."
+                text="Kassib Group works at the intersection of public works, construction, rehabilitation, municipal equipment, and tender follow-up. The company is organized around real project needs: clear documentation, controlled procurement, field supervision, stock coordination, and disciplined execution."
               />
               <p className="lead-copy">
-                Based in Morocco with strong activity around Taroudant and Souss-Massa, Kassib Group supports public and local development projects that require practical coordination and dependable execution.
+                Based in Morocco with activity around Taroudant and Souss-Massa,
+                Kassib Group supports public and local development projects that
+                require technical reliability, administrative clarity, and
+                operational follow-through.
               </p>
             </div>
-            <div className="col-lg-6">
-              <div className="image-frame">
-                <img
-                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&h=700&fit=crop&auto=format"
-                  alt="Business partners shaking hands"
-                  loading="lazy"
-                  decoding="async"
-                />
+
+            <div className="col-lg-5">
+              <div className="about-indicators">
+                {indicators.map(([number, label]) => (
+                  <div className="about-indicator" key={label}>
+                    <strong>{number}</strong>
+                    <span>{label}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -57,42 +83,19 @@ export default function About() {
 
       <section className="section-padding bg-soft">
         <div className="container">
-          <div className="row g-4">
-            <div className="col-lg-6">
-              <div className="mission-card dark">
-                <Rocket size={30} />
-                <h3>Mission</h3>
-                <p>
-                  To accompany clients in the successful delivery of ambitious
-                  public works and community projects by combining site execution,
-                  tender follow-up, supplier coordination, and a constant
-                  commitment to reliable delivery.
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="mission-card red">
-                <Eye size={30} />
-                <h3>Vision</h3>
-                <p>
-                  To become a trusted reference for future-ready development,
-                  recognized for quality public works, disciplined documentation,
-                  local impact, and responsible service to communities.
-                </p>
-              </div>
-            </div>
+          <div className="section-heading-row">
+            <SectionTitle
+              eyebrow="Operational Strength"
+              title="A company structured around execution."
+              text="The work is supported by practical capabilities that help projects move from tender file to site delivery."
+            />
           </div>
-        </div>
-      </section>
 
-      <section className="section-padding">
-        <div className="container">
-          <SectionTitle eyebrow="Values" title="The principles behind our work." align="center" />
-          <div className="row g-4 mt-2">
-            {values.map(([number, title, text]) => (
+          <div className="row g-4">
+            {capabilities.map(([Icon, title, text]) => (
               <div className="col-md-6" key={title}>
-                <div className="value-card">
-                  <strong>{number}</strong>
+                <div className="capability-card">
+                  <Icon size={25} />
                   <div>
                     <h3>{title}</h3>
                     <p>{text}</p>
@@ -104,36 +107,63 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section-padding bg-soft">
+      <section className="about-mission-band">
         <div className="container">
-          <div className="row g-4 align-items-center">
-            <div className="col-lg-5">
+          <div className="row g-4">
+            <div className="col-lg-6">
+              <div className="mission-card dark">
+                <Rocket size={30} />
+                <h3>Mission</h3>
+                <p>
+                  To help public and community projects move forward through
+                  organized tender follow-up, technical execution, supplier
+                  coordination, logistics, and reliable site delivery.
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="mission-card red">
+                <Eye size={30} />
+                <h3>Vision</h3>
+                <p>
+                  To become a trusted partner for public works, construction,
+                  rehabilitation, and local infrastructure projects that require
+                  discipline, clarity, and operational responsibility.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding">
+        <div className="container">
+          <div className="row g-4 align-items-start">
+            <div className="col-lg-4">
               <SectionTitle
-                eyebrow="Why Choose Us"
-                title="A focused partner for public works and local authority projects."
-                text="Kassib Group brings practical organization to projects where deadlines, documentation, procurement, and site execution must move together."
+                eyebrow="How We Work"
+                title="Clear steps from tender to delivery."
+                text="Kassib Group keeps projects readable, coordinated, and ready for execution."
               />
             </div>
-            <div className="col-lg-7">
-              <div className="row g-3">
-                {[
-                  [Lightbulb, "Practical solutions"],
-                  [Award, "Professional execution"],
-                  [Handshake, "Public client focus"],
-                  [Gem, "Community value"],
-                ].map(([Icon, label]) => (
-                  <div className="col-sm-6" key={label}>
-                    <div className="why-card">
-                      <Icon size={24} />
-                      <span>{label}</span>
+
+            <div className="col-lg-8">
+              <div className="about-workflow">
+                {workflow.map(([title, text], index) => (
+                  <div className="workflow-item" key={title}>
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <div>
+                      <h3>{title}</h3>
+                      <p>{text}</p>
                     </div>
                   </div>
                 ))}
               </div>
+
               <div className="feature-list mt-4">
-                <span><CheckCircle2 size={18} /> Public tender and administrative follow-up</span>
-                <span><CheckCircle2 size={18} /> Civil works, rehabilitation, and equipment supply</span>
-                <span><CheckCircle2 size={18} /> Field coordination with suppliers, stock, and invoices</span>
+                <span><CheckCircle2 size={18} /> Public tender, administrative, and operational follow-up</span>
+                <span><CheckCircle2 size={18} /> Civil works, rehabilitation, industrial, and metal construction</span>
+                <span><CheckCircle2 size={18} /> Field coordination with purchasing, suppliers, stock, and invoices</span>
               </div>
             </div>
           </div>
