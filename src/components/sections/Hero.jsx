@@ -13,9 +13,10 @@ export default function Hero({
   secondaryLabel,
   secondaryTo,
   compact = false,
+  className = "",
 }) {
   return (
-    <section className={`hero-section ${compact ? "hero-compact" : ""}`}>
+    <section className={`hero-section ${compact ? "hero-compact" : ""} ${className}`.trim()}>
       <div
         className="hero-bg"
         style={{ backgroundImage: `url(${image})` }}

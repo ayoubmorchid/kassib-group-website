@@ -15,6 +15,7 @@ export default function About() {
     <>
       <Hero
         compact
+        className="about-compact-hero"
         eyebrow="Who We Are"
         title="About Kassib Group"
         text="A professional company working in public works, construction, rehabilitation, infrastructure, equipment supply, and tender follow-up."
