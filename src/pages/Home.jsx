@@ -5,6 +5,7 @@ import CTASection from "../components/sections/CTASection";
 import NewsSection from "../components/sections/NewsSection";
 import ProjectsSection from "../components/sections/ProjectsSection";
 import ServicesSection from "../components/sections/ServicesSection";
+import SEO from "../components/SEO";
 import SectionTitle from "../components/ui/SectionTitle";
 
 const stats = [
@@ -17,6 +18,10 @@ const stats = [
 export default function Home() {
   return (
     <>
+      <SEO
+        title="Kassib Group | Public Works & Infrastructure"
+        description="Kassib Group specializes in public works, civil construction, rehabilitation, road infrastructure, municipal equipment and tender management in Morocco."
+      />
       <Hero
         eyebrow="Kassib Group"
         title="Embracing the Better Future"

@@ -345,6 +345,41 @@
   color: rgba(255, 255, 255, 0.72);
 }
 
+/* Legal pages */
+
+.legal-content {
+  max-width: 860px;
+}
+
+.legal-sections {
+  display: grid;
+  gap: 28px;
+  margin-top: 36px;
+}
+
+.legal-section {
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.legal-section:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.legal-section h2 {
+  margin-bottom: 10px;
+  color: var(--ink);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.legal-section p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
 /* CTA */
 
 .cta-section {

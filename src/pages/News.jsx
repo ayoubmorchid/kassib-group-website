@@ -1,5 +1,6 @@
 import Hero from "../components/sections/Hero";
 import CTASection from "../components/sections/CTASection";
+import SEO from "../components/SEO";
 import SectionTitle from "../components/ui/SectionTitle";
 import NewsCard from "../components/ui/NewsCard";
 import { news } from "../data/news";
@@ -9,6 +10,11 @@ export default function News() {
 
   return (
     <>
+      <SEO
+        title="News | Kassib Group"
+        description="Read Kassib Group news and perspectives on public works, rehabilitation, tender follow-up, local infrastructure, and municipal equipment."
+        path="/news"
+      />
       <Hero
         compact
         eyebrow="Insights"

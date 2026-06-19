@@ -1,6 +1,7 @@
 import { Award, CheckCircle2, Eye, Gem, Handshake, Lightbulb, Rocket } from "lucide-react";
 import Hero from "../components/sections/Hero";
 import CTASection from "../components/sections/CTASection";
+import SEO from "../components/SEO";
 import SectionTitle from "../components/ui/SectionTitle";
 
 const values = [
@@ -13,6 +14,11 @@ const values = [
 export default function About() {
   return (
     <>
+      <SEO
+        title="About Kassib Group"
+        description="Learn about Kassib Group, a Morocco-based company focused on public works, construction, rehabilitation, infrastructure, equipment supply, and tender follow-up."
+        path="/about"
+      />
       <Hero
         compact
         className="about-compact-hero"

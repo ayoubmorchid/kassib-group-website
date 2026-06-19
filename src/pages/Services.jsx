@@ -2,6 +2,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Hero from "../components/sections/Hero";
 import CTASection from "../components/sections/CTASection";
+import SEO from "../components/SEO";
 import SectionTitle from "../components/ui/SectionTitle";
 import ServiceCard from "../components/ui/ServiceCard";
 import { services } from "../data/services";
@@ -16,6 +17,11 @@ const process = [
 export default function Services() {
   return (
     <>
+      <SEO
+        title="Services | Kassib Group"
+        description="Explore Kassib Group services for public works, building rehabilitation, road links, water and sanitation networks, municipal supplies, and tender administration."
+        path="/services"
+      />
       <Hero
         compact
         eyebrow="What We Do"

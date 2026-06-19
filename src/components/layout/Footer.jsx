@@ -67,8 +67,8 @@ export default function Footer() {
         <div className="footer-bottom">
           <span>(c) 2026 Kassib Group. All Rights Reserved.</span>
           <div>
-            <Link to="/contact">Privacy Policy</Link>
-            <Link to="/contact">Terms of Service</Link>
+            <Link to="/privacy-policy">Privacy Policy</Link>
+            <Link to="/terms-of-service">Terms of Service</Link>
           </div>
         </div>
       </div>

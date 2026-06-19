@@ -1,5 +1,6 @@
 import Hero from "../components/sections/Hero";
 import CTASection from "../components/sections/CTASection";
+import SEO from "../components/SEO";
 import SectionTitle from "../components/ui/SectionTitle";
 import ProjectCard from "../components/ui/ProjectCard";
 import { projects } from "../data/projects";
@@ -7,6 +8,11 @@ import { projects } from "../data/projects";
 export default function Projects() {
   return (
     <>
+      <SEO
+        title="Projects | Kassib Group"
+        description="Discover Kassib Group project references across public works, rehabilitation, water infrastructure, road links, municipal equipment, and local services."
+        path="/projects"
+      />
       <Hero
         compact
         eyebrow="Our Portfolio"

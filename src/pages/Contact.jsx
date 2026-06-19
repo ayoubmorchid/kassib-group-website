@@ -1,19 +1,78 @@
 import { useState } from "react";
 import { Clock, Mail, MapPin, Phone, Send } from "lucide-react";
 import Hero from "../components/sections/Hero";
+import SEO from "../components/SEO";
 import SectionTitle from "../components/ui/SectionTitle";
 import { company } from "../data/company";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [errors, setErrors] = useState({});
+
+  const validateForm = (form) => {
+    const formData = new FormData(form);
+    const name = formData.get("name").trim();
+    const email = formData.get("email").trim();
+    const subject = formData.get("subject").trim();
+    const message = formData.get("message").trim();
+    const nextErrors = {};
+
+    if (!name) {
+      nextErrors.name = "Name is required.";
+    }
+
+    if (!email) {
+      nextErrors.email = "Email is required.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      nextErrors.email = "Please enter a valid email address.";
+    }
+
+    if (!subject) {
+      nextErrors.subject = "Subject is required.";
+    }
+
+    if (!message) {
+      nextErrors.message = "Message is required.";
+    } else if (message.length < 10) {
+      nextErrors.message = "Message must contain at least 10 characters.";
+    }
+
+    return nextErrors;
+  };
+
+  const clearFieldError = (event) => {
+    const { name } = event.target;
+
+    if (errors[name]) {
+      setErrors((currentErrors) => {
+        const remainingErrors = { ...currentErrors };
+        delete remainingErrors[name];
+        return remainingErrors;
+      });
+    }
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const nextErrors = validateForm(event.currentTarget);
+
+    if (Object.keys(nextErrors).length > 0) {
+      setErrors(nextErrors);
+      setSubmitted(false);
+      return;
+    }
+
+    setErrors({});
     setSubmitted(true);
   };
 
   return (
     <>
+      <SEO
+        title="Contact Kassib Group"
+        description="Contact Kassib Group to discuss public works, rehabilitation, road links, municipal equipment, tender files, and field execution needs in Morocco."
+        path="/contact"
+      />
       <Hero
         compact
         eyebrow="Get in Touch"
@@ -75,7 +134,7 @@ export default function Contact() {
                     </button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit}>
+                  <form onSubmit={handleSubmit} noValidate>
                     <div className="row g-4">
                       <div className="col-md-6">
                         <label className="form-label" htmlFor="contact-name">
@@ -83,13 +142,21 @@ export default function Contact() {
                         </label>
                         <input
                           id="contact-name"
-                          className="form-control"
+                          className={`form-control ${errors.name ? "is-invalid" : ""}`}
                           type="text"
                           name="name"
                           autoComplete="name"
                           required
+                          aria-invalid={errors.name ? "true" : "false"}
+                          aria-describedby={errors.name ? "contact-name-error" : undefined}
+                          onChange={clearFieldError}
                           placeholder="Your name"
                         />
+                        {errors.name && (
+                          <div className="field-error" id="contact-name-error">
+                            {errors.name}
+                          </div>
+                        )}
                       </div>
 
                       <div className="col-md-6">
@@ -98,13 +165,21 @@ export default function Contact() {
                         </label>
                         <input
                           id="contact-email"
-                          className="form-control"
+                          className={`form-control ${errors.email ? "is-invalid" : ""}`}
                           type="email"
                           name="email"
                           autoComplete="email"
                           required
+                          aria-invalid={errors.email ? "true" : "false"}
+                          aria-describedby={errors.email ? "contact-email-error" : undefined}
+                          onChange={clearFieldError}
                           placeholder="you@example.com"
                         />
+                        {errors.email && (
+                          <div className="field-error" id="contact-email-error">
+                            {errors.email}
+                          </div>
+                        )}
                       </div>
 
                       <div className="col-12">
@@ -113,12 +188,20 @@ export default function Contact() {
                         </label>
                         <input
                           id="contact-subject"
-                          className="form-control"
+                          className={`form-control ${errors.subject ? "is-invalid" : ""}`}
                           type="text"
                           name="subject"
                           required
+                          aria-invalid={errors.subject ? "true" : "false"}
+                          aria-describedby={errors.subject ? "contact-subject-error" : undefined}
+                          onChange={clearFieldError}
                           placeholder="Public works enquiry"
                         />
+                        {errors.subject && (
+                          <div className="field-error" id="contact-subject-error">
+                            {errors.subject}
+                          </div>
+                        )}
                       </div>
 
                       <div className="col-12">
@@ -127,12 +210,21 @@ export default function Contact() {
                         </label>
                         <textarea
                           id="contact-message"
-                          className="form-control"
+                          className={`form-control ${errors.message ? "is-invalid" : ""}`}
                           rows="6"
                           name="message"
                           required
+                          minLength="10"
+                          aria-invalid={errors.message ? "true" : "false"}
+                          aria-describedby={errors.message ? "contact-message-error" : undefined}
+                          onChange={clearFieldError}
                           placeholder="Tell us about your tender, works, or equipment needs"
                         />
+                        {errors.message && (
+                          <div className="field-error" id="contact-message-error">
+                            {errors.message}
+                          </div>
+                        )}
                       </div>
 
                       <div className="col-12">
