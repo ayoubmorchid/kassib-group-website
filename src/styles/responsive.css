@@ -1,0 +1,105 @@
+﻿@media (max-width: 991.98px) {
+  .site-header {
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+  }
+
+  .navbar {
+    min-height: 74px;
+  }
+
+  .navbar-brand img {
+    height: 50px;
+  }
+
+  .navbar-toggler,
+  .site-header .navbar-toggler {
+    color: var(--ink);
+  }
+
+  .navbar-collapse {
+    padding: 1rem 0 1.4rem;
+  }
+
+  .nav-link,
+  .site-header.is-scrolled .nav-link {
+    color: var(--ink);
+    padding: 0.8rem 0 !important;
+  }
+
+  .nav-cta {
+    width: 100%;
+  }
+
+  .navbar-nav {
+    gap: 0;
+  }
+
+  .section-heading-row,
+  .portfolio-band,
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .process-grid,
+  .featured-news {
+    grid-template-columns: 1fr;
+  }
+
+  .process-card {
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-section {
+    min-height: 0;
+    padding: 8.5rem 0 5rem;
+  }
+
+  .hero-section .section-title h1,
+  .hero-section .section-title h2 {
+    font-size: 2.65rem;
+  }
+
+  .section-padding {
+    padding: 4.25rem 0;
+  }
+
+  .floating-badge {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .mission-card,
+  .contact-panel,
+  .portfolio-band,
+  .featured-news .news-body {
+    padding: 2rem;
+  }
+
+  .value-card {
+    gap: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-section .d-flex {
+    width: 100%;
+  }
+
+  .hero-section .section-title h1,
+  .hero-section .section-title h2,
+  .hero-compact .section-title h1,
+  .hero-compact .section-title h2 {
+    font-size: 2.45rem;
+  }
+
+  .footer-bottom div {
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+}

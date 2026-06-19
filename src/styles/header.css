@@ -1,0 +1,158 @@
+﻿.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+  border-bottom: 1px solid transparent;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.site-header.is-scrolled {
+  background: #ffffff;
+  border-color: var(--line);
+  box-shadow: 0 4px 16px rgba(17, 17, 17, 0.06);
+}
+
+.navbar {
+  min-height: 76px;
+  padding: 0;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  width: auto;
+  height: 50px;
+  object-fit: contain;
+}
+
+.navbar-nav {
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-link {
+  padding: 10px 12px !important;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.site-header.is-scrolled .nav-link {
+  color: var(--ink);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--brand-red);
+}
+
+.navbar-toggler {
+  padding: 6px;
+  border: 0;
+  color: #ffffff;
+  box-shadow: none !important;
+}
+
+.site-header.is-scrolled .navbar-toggler {
+  color: var(--ink);
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.btn-brand {
+  background: var(--brand-red);
+  border: 1px solid var(--brand-red);
+  color: #ffffff;
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+  background: var(--brand-red-dark);
+  border-color: var(--brand-red-dark);
+  color: #ffffff;
+}
+
+.btn-dark-brand {
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  color: #ffffff;
+}
+
+.btn-dark-brand:hover,
+.btn-dark-brand:focus {
+  background: #2a2a2a;
+  border-color: #2a2a2a;
+  color: #ffffff;
+}
+
+.nav-cta {
+  min-height: 42px;
+  padding-inline: 18px;
+}
+
+/* Mobile */
+
+@media (max-width: 991px) {
+  .site-header {
+    background: #ffffff;
+    border-color: var(--line);
+  }
+
+  .navbar {
+    min-height: 70px;
+  }
+
+  .navbar-brand img {
+    height: 44px;
+  }
+
+  .navbar-collapse {
+    padding: 16px 0 20px;
+  }
+
+  .navbar-nav {
+    align-items: stretch;
+    gap: 2px;
+  }
+
+  .nav-link,
+  .site-header .nav-link {
+    color: var(--ink);
+    padding: 10px 0 !important;
+  }
+
+  .navbar-toggler,
+  .site-header .navbar-toggler {
+    color: var(--ink);
+  }
+
+  .nav-cta {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

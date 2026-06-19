@@ -1,11 +1,10 @@
-function App() {
+import Layout from "./components/layout/Layout";
+import AppRouter from "./router/index.jsx";
+
+export default function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <h1 className="text-5xl font-bold text-red-600">
-        Kassib Group
-      </h1>
-    </div>
+    <Layout>
+      <AppRouter />
+    </Layout>
   );
 }
-
-export default App;
