@@ -56,7 +56,7 @@ export default function Navbar() {
             </ul>
 
             <Button to="/contact" className="nav-cta" onClick={() => setMobileOpen(false)}>
-              Contact Us
+              Nous contacter
             </Button>
           </div>
         </div>

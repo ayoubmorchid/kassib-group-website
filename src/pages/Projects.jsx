@@ -9,23 +9,24 @@ export default function Projects() {
   return (
     <>
       <SEO
-        title="Projects | Kassib Group"
-        description="Discover Kassib Group project references across public works, rehabilitation, water infrastructure, road links, municipal equipment, and local services."
+        title="Domaines d'intervention | Kassib Group"
+        description="Découvrez les domaines d'intervention de KASSIB GROUP en construction métallique, soudure, signalétique, travaux spécialisés et fabrications techniques."
         path="/projects"
       />
       <Hero
         compact
-        eyebrow="Our Portfolio"
-        title="Projects"
-        text="A selection of realistic references inspired by Kassib Group tender files: public works, rehabilitation, water infrastructure, roads, municipal equipment, and essential services."
+        eyebrow="Domaines"
+        title="Domaines d'intervention"
+        text="Une présentation sobre des domaines d'activité de KASSIB GROUP, sans créer de fausses références de projets."
         image="https://images.unsplash.com/photo-1460472178825-e5240623afd5?w=1500&h=800&fit=crop&auto=format"
       />
 
       <section className="section-padding bg-soft">
         <div className="container">
           <SectionTitle
-            eyebrow="Selected Work"
-            title="Projects shaped by public needs, site work, and disciplined follow-up."
+            eyebrow="Activités"
+            title="Des domaines techniques clairement identifiés."
+            text="Les éléments présentés ci-dessous décrivent des domaines d'intervention et non des chantiers, clients ou références non vérifiés."
             align="center"
           />
           <div className="row g-4 mt-2">
@@ -42,13 +43,13 @@ export default function Projects() {
         <div className="container">
           <div className="portfolio-band">
             <div>
-              <p>Project approach</p>
-              <h2>From tender review to attachments and delivery, every project needs organized execution.</h2>
+              <p>Approche</p>
+              <h2>Présenter les savoir-faire sans inventer de références permet de rester clair, professionnel et crédible.</h2>
             </div>
             <div className="portfolio-metrics">
-              <span><strong>6</strong> Project references</span>
-              <span><strong>7</strong> Service disciplines</span>
-              <span><strong>1</strong> Public works focus</span>
+              <span><strong>4</strong> Domaines présentés</span>
+              <span><strong>0</strong> Faux projet</span>
+              <span><strong>1</strong> Positionnement technique</span>
             </div>
           </div>
         </div>

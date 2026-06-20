@@ -20,7 +20,7 @@ export default function ServiceCard({ service, featured = false }) {
       )}
       {!service.highlights && (
         <span className="card-link">
-          Learn more <ArrowRight size={14} />
+          En savoir plus <ArrowRight size={14} />
         </span>
       )}
     </Card>

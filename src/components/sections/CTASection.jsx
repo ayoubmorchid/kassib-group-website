@@ -6,15 +6,15 @@ export default function CTASection() {
   return (
     <section className="cta-section">
       <Container className="text-center position-relative">
-        <p className="cta-eyebrow">Ready to deliver?</p>
-        <h2>Build stronger public works and local infrastructure with Kassib Group.</h2>
+        <p className="cta-eyebrow">Un besoin technique ?</p>
+        <h2>Parlez-nous de votre projet métallique ou technique.</h2>
         <p>
-          Our team brings tender organization, site coordination, supplier
-          follow-up, and dependable execution to projects that need clarity from
-          the first document to final delivery.
+          KASSIB GROUP accompagne les professionnels dans leurs besoins de
+          construction métallique, soudure, fabrication technique et travaux
+          spécialisés.
         </p>
         <Button to="/contact">
-          Contact us
+          Nous contacter
           <ArrowRight size={17} />
         </Button>
       </Container>

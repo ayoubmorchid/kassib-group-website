@@ -10,11 +10,11 @@ export default function ProjectsSection() {
       <div className="container">
         <div className="section-heading-row">
           <SectionTitle
-            eyebrow="Our Work"
-            title="Project references inspired by real tender activity."
+            eyebrow="Domaines"
+            title="Des domaines d'intervention présentés sans fausses références."
           />
           <Link to="/projects" className="text-link">
-            View projects <ArrowRight size={16} />
+            Voir les domaines <ArrowRight size={16} />
           </Link>
         </div>
         <div className="row g-4">

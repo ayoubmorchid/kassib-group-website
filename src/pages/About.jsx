@@ -11,42 +11,56 @@ import Hero from "../components/sections/Hero";
 import CTASection from "../components/sections/CTASection";
 import SEO from "../components/SEO";
 import SectionTitle from "../components/ui/SectionTitle";
+import { company } from "../data/company";
 
 const indicators = [
-  ["01", "Public works focus"],
-  ["02", "Construction & rehabilitation"],
-  ["03", "Tender and procurement follow-up"],
-  ["04", "Site, stock, and logistics coordination"],
+  ["01", "Construction métallique"],
+  ["02", "Soudure et assemblage"],
+  ["03", "Fabrication technique"],
+  ["04", "Travaux spécialisés"],
 ];
 
 const capabilities = [
-  [Lightbulb, "Tender Management", "Preparation, estimates, administrative follow-up, supplier situations, and project documentation."],
-  [Award, "Technical Execution", "Civil works, rehabilitation, finishing, infrastructure works, and coordinated site supervision."],
-  [Handshake, "Procurement Control", "Purchasing follow-up, supplier coordination, equipment needs, invoices, and purchase orders."],
-  [Gem, "Operational Logistics", "Stock tracking, material movement, equipment availability, and support for active construction sites."],
+  [Lightbulb, "Construction métallique", "Ouvrages, structures, assemblages et réalisations métalliques adaptées aux besoins des professionnels."],
+  [Award, "Soudure & exécution", "Travaux de soudure, montage, préparation de pièces et interventions techniques sur mesure."],
+  [Handshake, "Services & fourniture", "Accompagnement technique, fourniture, négoce et solutions complémentaires selon les besoins du projet."],
+  [Gem, "Signalétique", "Fabrication de panneaux publicitaires, panneaux de signalisation routière et supports spécialisés."],
 ];
 
-const workflow = [
-  ["Review", "Tender requirements, quantities, technical files, deadlines, and administrative obligations."],
-  ["Prepare", "Planning, procurement needs, supplier coordination, estimates, and execution resources."],
-  ["Execute", "Construction site coordination, rehabilitation works, logistics, supervision, and field reporting."],
-  ["Follow Up", "Attachments, invoices, stock movements, supplier situations, and project documentation."],
+const development = [
+  "Découpage",
+  "Pliage",
+  "Roulage",
+  "Usinage",
+  "Assemblage / soudure",
+  "Produit fini",
+];
+
+const values = [
+  "Qualité",
+  "Réactivité",
+  "Professionnalisme",
+  "Esprit d'équipe",
+  "Intégrité",
+  "Sécurité",
+  "Responsabilité",
+  "Amélioration continue",
 ];
 
 export default function About() {
   return (
     <>
       <SEO
-        title="About Kassib Group"
-        description="Learn about Kassib Group, a Morocco-based company focused on public works, construction, rehabilitation, infrastructure, equipment supply, and tender follow-up."
+        title="À propos | KASSIB GROUP"
+        description="Découvrez KASSIB GROUP, entreprise basée à Oulad Teima spécialisée dans la construction métallique, la soudure, la fabrication technique et les travaux spécialisés."
         path="/about"
       />
       <Hero
         compact
         className="about-compact-hero"
-        eyebrow="Who We Are"
-        title="About Kassib Group"
-        text="A structured construction and public works company supporting projects through technical execution, tender management, procurement, logistics, and site coordination."
+        eyebrow="À propos"
+        title="KASSIB GROUP"
+        text="Entreprise basée à Oulad Teima, spécialisée dans la construction métallique, la soudure, la fabrication technique, la transformation métallique et les travaux spécialisés."
         image="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1500&h=800&fit=crop&auto=format"
       />
 
@@ -55,15 +69,14 @@ export default function About() {
           <div className="row g-4 align-items-start">
             <div className="col-lg-7">
               <SectionTitle
-                eyebrow="Company Profile"
-                title="Built for practical delivery, not just paperwork."
-                text="Kassib Group works at the intersection of public works, construction, rehabilitation, municipal equipment, and tender follow-up. The company is organized around real project needs: clear documentation, controlled procurement, field supervision, stock coordination, and disciplined execution."
+                eyebrow="Présentation"
+                title="Une entreprise technique ancrée dans la région Souss-Massa."
+                text={`Basée à ${company.location}, KASSIB GROUP accompagne les professionnels dans leurs besoins métalliques, techniques et industriels. L'entreprise intervient dans la construction métallique, la soudure, les travaux spécialisés, la signalétique, la fourniture, le négoce et les services techniques.`}
               />
               <p className="lead-copy">
-                Based in Morocco with activity around Taroudant and Souss-Massa,
-                Kassib Group supports public and local development projects that
-                require technical reliability, administrative clarity, and
-                operational follow-through.
+                Son approche repose sur la qualité d'exécution, la réactivité,
+                la proximité avec les clients et le développement progressif de
+                ses capacités techniques.
               </p>
             </div>
 
@@ -85,9 +98,9 @@ export default function About() {
         <div className="container">
           <div className="section-heading-row">
             <SectionTitle
-              eyebrow="Operational Strength"
-              title="A company structured around execution."
-              text="The work is supported by practical capabilities that help projects move from tender file to site delivery."
+              eyebrow="Notre savoir-faire"
+              title="Des compétences orientées métal, technique et exécution."
+              text="Les activités actuelles confirmées sont présentées comme des domaines d'intervention, sans créer de références ou de projets non vérifiés."
             />
           </div>
 
@@ -115,9 +128,9 @@ export default function About() {
                 <Rocket size={30} />
                 <h3>Mission</h3>
                 <p>
-                  To help public and community projects move forward through
-                  organized tender follow-up, technical execution, supplier
-                  coordination, logistics, and reliable site delivery.
+                  Fournir des solutions fiables, adaptées aux besoins des
+                  professionnels et exécutées avec engagement, organisation et
+                  professionnalisme.
                 </p>
               </div>
             </div>
@@ -126,9 +139,9 @@ export default function About() {
                 <Eye size={30} />
                 <h3>Vision</h3>
                 <p>
-                  To become a trusted partner for public works, construction,
-                  rehabilitation, and local infrastructure projects that require
-                  discipline, clarity, and operational responsibility.
+                  Consolider les métiers actuels, renforcer progressivement les
+                  capacités industrielles et élargir l'offre de solutions à plus
+                  forte valeur ajoutée locale.
                 </p>
               </div>
             </div>
@@ -141,31 +154,50 @@ export default function About() {
           <div className="row g-4 align-items-start">
             <div className="col-lg-4">
               <SectionTitle
-                eyebrow="How We Work"
-                title="Clear steps from tender to delivery."
-                text="Kassib Group keeps projects readable, coordinated, and ready for execution."
+                eyebrow="Développement industriel"
+                title="Une évolution progressive des capacités."
+                text="Cette ambition est présentée comme un projet de développement, et non comme une capacité déjà entièrement opérationnelle."
               />
             </div>
 
             <div className="col-lg-8">
               <div className="about-workflow">
-                {workflow.map(([title, text], index) => (
-                  <div className="workflow-item" key={title}>
+                {development.map((step, index) => (
+                  <div className="workflow-item" key={step}>
                     <span>{String(index + 1).padStart(2, "0")}</span>
                     <div>
-                      <h3>{title}</h3>
-                      <p>{text}</p>
+                      <h3>{step}</h3>
+                      <p>
+                        Renforcement progressif des capacités de fabrication et
+                        de transformation métallique.
+                      </p>
                     </div>
                   </div>
                 ))}
               </div>
 
               <div className="feature-list mt-4">
-                <span><CheckCircle2 size={18} /> Public tender, administrative, and operational follow-up</span>
-                <span><CheckCircle2 size={18} /> Civil works, rehabilitation, industrial, and metal construction</span>
-                <span><CheckCircle2 size={18} /> Field coordination with purchasing, suppliers, stock, and invoices</span>
+                <span><CheckCircle2 size={18} /> Projet de développement industriel</span>
+                <span><CheckCircle2 size={18} /> Amélioration de la qualité et de la capacité de production</span>
+                <span><CheckCircle2 size={18} /> Création de valeur ajoutée locale dans la région Souss-Massa</span>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-soft">
+        <div className="container">
+          <SectionTitle
+            eyebrow="Valeurs"
+            title="Des engagements simples et lisibles."
+            text="KASSIB GROUP accorde une attention particulière à la qualité, à la sécurité, à l'intégrité, à la responsabilité et à l'amélioration continue."
+            align="center"
+          />
+          <div className="about-values">
+            {values.map((value) => (
+              <span key={value}>{value}</span>
+            ))}
           </div>
         </div>
       </section>

@@ -4,49 +4,28 @@ import SectionTitle from "../components/ui/SectionTitle";
 import { company } from "../data/company";
 
 const sections = [
-  {
-    title: "Acceptance of Terms",
-    text: "By accessing or using this website, you agree to these Terms of Service. If you do not agree with these terms, you should discontinue use of the website.",
-  },
-  {
-    title: "Use of Website",
-    text: "This website is provided for general information about Kassib Group, its services, projects, news, and contact channels. Visitors agree not to misuse the website, interfere with its operation, or attempt unauthorized access.",
-  },
-  {
-    title: "Intellectual Property",
-    text: "Website content, text, images, layout, brand elements, and related materials are owned by or licensed to Kassib Group unless otherwise indicated. Content may not be copied, reproduced, or distributed without permission.",
-  },
-  {
-    title: "Limitation of Liability",
-    text: "The website is provided on an informational basis. Kassib Group makes reasonable efforts to keep information accurate, but does not guarantee completeness or uninterrupted availability and is not liable for indirect losses arising from website use.",
-  },
-  {
-    title: "External Links",
-    text: "The website may contain links or embedded services from third parties. Kassib Group is not responsible for the content, availability, privacy practices, or terms of external websites and services.",
-  },
-  {
-    title: "Governing Law",
-    text: "These terms are governed by applicable laws in Morocco, unless another mandatory legal framework applies. Any dispute should be handled through the competent authorities or courts.",
-  },
-  {
-    title: "Contact Information",
-    text: `For questions about these Terms of Service, contact Kassib Group at ${company.email} or by phone at ${company.phone}.`,
-  },
+  ["Acceptation des conditions", "L'utilisation de ce site implique l'acceptation des présentes conditions d'utilisation."],
+  ["Utilisation du site", "Le site présente les activités, services et informations générales de KASSIB GROUP à destination des visiteurs et partenaires."],
+  ["Propriété intellectuelle", "Les contenus, textes, éléments graphiques et éléments de marque du site sont protégés et ne peuvent pas être reproduits sans autorisation."],
+  ["Limitation de responsabilité", "KASSIB GROUP s'efforce de présenter des informations claires, mais ne garantit pas l'absence d'erreurs ou l'accès permanent au site."],
+  ["Liens externes", "Le site peut contenir des liens ou services externes dont les contenus et politiques relèvent de leurs propres éditeurs."],
+  ["Droit applicable", "Les présentes conditions sont interprétées selon les règles applicables au Maroc, sauf disposition obligatoire contraire."],
+  ["Contact", `Pour toute question concernant ces conditions, contactez KASSIB GROUP à l'adresse ${company.email}.`],
 ];
 
 export default function TermsOfService() {
   return (
     <>
       <SEO
-        title="Terms of Service | Kassib Group"
-        description="Review the Kassib Group Terms of Service covering website use, intellectual property, external links, liability, and contact information."
+        title="Conditions d'utilisation | KASSIB GROUP"
+        description="Consultez les conditions d'utilisation du site web de KASSIB GROUP."
         path="/terms-of-service"
       />
       <Hero
         compact
-        eyebrow="Legal"
-        title="Terms of Service"
-        text="The terms that apply when accessing and using the Kassib Group website."
+        eyebrow="Conditions"
+        title="Conditions d'utilisation"
+        text="Les règles générales qui encadrent l'utilisation du site web de KASSIB GROUP."
         image="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1500&h=800&fit=crop&auto=format"
       />
 
@@ -54,16 +33,16 @@ export default function TermsOfService() {
         <div className="container">
           <div className="legal-content">
             <SectionTitle
-              eyebrow="Terms"
-              title="Website access and usage terms."
-              text="These terms help define responsible use of this website and the information provided by Kassib Group."
+              eyebrow="Site web"
+              title="Conditions générales d'utilisation."
+              text="Ces conditions définissent un cadre simple pour l'accès aux informations publiées sur le site."
             />
 
             <div className="legal-sections">
-              {sections.map((section) => (
-                <article className="legal-section" key={section.title}>
-                  <h2>{section.title}</h2>
-                  <p>{section.text}</p>
+              {sections.map(([title, text]) => (
+                <article className="legal-section" key={title}>
+                  <h2>{title}</h2>
+                  <p>{text}</p>
                 </article>
               ))}
             </div>

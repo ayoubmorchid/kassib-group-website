@@ -5,13 +5,17 @@ import NewsCard from "../ui/NewsCard";
 import SectionTitle from "../ui/SectionTitle";
 
 export default function NewsSection() {
+  if (news.length === 0) {
+    return null;
+  }
+
   return (
     <section className="section-padding">
       <div className="container">
         <div className="section-heading-row">
-          <SectionTitle eyebrow="News" title="Updates from public works and project delivery." />
+          <SectionTitle eyebrow="Actualités" title="Informations et publications de KASSIB GROUP." />
           <Link to="/news" className="text-link">
-            All news <ArrowRight size={16} />
+            Toutes les actualités <ArrowRight size={16} />
           </Link>
         </div>
         <div className="row g-4">

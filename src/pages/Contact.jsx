@@ -18,23 +18,23 @@ export default function Contact() {
     const nextErrors = {};
 
     if (!name) {
-      nextErrors.name = "Name is required.";
+      nextErrors.name = "Le nom est obligatoire.";
     }
 
     if (!email) {
-      nextErrors.email = "Email is required.";
+      nextErrors.email = "L'email est obligatoire.";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      nextErrors.email = "Please enter a valid email address.";
+      nextErrors.email = "Veuillez saisir une adresse email valide.";
     }
 
     if (!subject) {
-      nextErrors.subject = "Subject is required.";
+      nextErrors.subject = "Le sujet est obligatoire.";
     }
 
     if (!message) {
-      nextErrors.message = "Message is required.";
+      nextErrors.message = "Le message est obligatoire.";
     } else if (message.length < 10) {
-      nextErrors.message = "Message must contain at least 10 characters.";
+      nextErrors.message = "Le message doit contenir au moins 10 caractères.";
     }
 
     return nextErrors;
@@ -69,15 +69,15 @@ export default function Contact() {
   return (
     <>
       <SEO
-        title="Contact Kassib Group"
-        description="Contact Kassib Group to discuss public works, rehabilitation, road links, municipal equipment, tender files, and field execution needs in Morocco."
+        title="Contact KASSIB GROUP"
+        description="Contactez KASSIB GROUP pour discuter d'un besoin en construction métallique, soudure, fabrication technique ou travaux spécialisés."
         path="/contact"
       />
       <Hero
         compact
-        eyebrow="Get in Touch"
+        eyebrow="Contact"
         title="Contact"
-        text="Reach Kassib Group to discuss public works, rehabilitation, road links, municipal equipment, tender files, or field execution needs."
+        text="Contactez KASSIB GROUP pour discuter d'un besoin technique, métallique ou industriel."
         image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1500&h=800&fit=crop&auto=format"
       />
 
@@ -86,9 +86,9 @@ export default function Contact() {
           <div className="row g-4 align-items-start">
             <div className="col-lg-4">
               <SectionTitle
-                eyebrow="Contact Information"
-                title="Let's start with a clear conversation."
-                text="Our team is available for public project enquiries, tender follow-up, supplier coordination, and site execution discussions."
+                eyebrow="Informations"
+                title="Commençons par un échange clair."
+                text="Notre équipe est disponible pour étudier vos besoins en construction métallique, soudure, fabrication technique, fourniture ou travaux spécialisés."
               />
 
               <div className="contact-info">
@@ -119,10 +119,10 @@ export default function Contact() {
                 {submitted ? (
                   <div className="success-state">
                     <Send size={34} />
-                    <h2>Message received</h2>
+                    <h2>Message reçu</h2>
                     <p>
-                      Thank you for contacting Kassib Group. This demo form has
-                      prevented reload and confirmed your request visually.
+                      Merci d'avoir contacté KASSIB GROUP. Votre demande a été
+                      prise en compte visuellement par ce formulaire.
                     </p>
 
                     <button
@@ -130,7 +130,7 @@ export default function Contact() {
                       type="button"
                       onClick={() => setSubmitted(false)}
                     >
-                      Send another message
+                      Envoyer un autre message
                     </button>
                   </div>
                 ) : (
@@ -138,7 +138,7 @@ export default function Contact() {
                     <div className="row g-4">
                       <div className="col-md-6">
                         <label className="form-label" htmlFor="contact-name">
-                          Name
+                          Nom
                         </label>
                         <input
                           id="contact-name"
@@ -150,7 +150,7 @@ export default function Contact() {
                           aria-invalid={errors.name ? "true" : "false"}
                           aria-describedby={errors.name ? "contact-name-error" : undefined}
                           onChange={clearFieldError}
-                          placeholder="Your name"
+                          placeholder="Votre nom"
                         />
                         {errors.name && (
                           <div className="field-error" id="contact-name-error">
@@ -184,7 +184,7 @@ export default function Contact() {
 
                       <div className="col-12">
                         <label className="form-label" htmlFor="contact-subject">
-                          Subject
+                          Sujet
                         </label>
                         <input
                           id="contact-subject"
@@ -195,7 +195,7 @@ export default function Contact() {
                           aria-invalid={errors.subject ? "true" : "false"}
                           aria-describedby={errors.subject ? "contact-subject-error" : undefined}
                           onChange={clearFieldError}
-                          placeholder="Public works enquiry"
+                          placeholder="Demande technique"
                         />
                         {errors.subject && (
                           <div className="field-error" id="contact-subject-error">
@@ -218,7 +218,7 @@ export default function Contact() {
                           aria-invalid={errors.message ? "true" : "false"}
                           aria-describedby={errors.message ? "contact-message-error" : undefined}
                           onChange={clearFieldError}
-                          placeholder="Tell us about your tender, works, or equipment needs"
+                          placeholder="Décrivez votre besoin technique ou métallique"
                         />
                         {errors.message && (
                           <div className="field-error" id="contact-message-error">
@@ -229,7 +229,7 @@ export default function Contact() {
 
                       <div className="col-12">
                         <button className="btn btn-brand" type="submit">
-                          Send message <Send size={16} />
+                          Envoyer le message <Send size={16} />
                         </button>
                       </div>
                     </div>
@@ -245,17 +245,16 @@ export default function Contact() {
         <div className="container">
           <div className="map-card">
             <div className="map-content">
-              <span className="eyebrow">Location</span>
+              <span className="eyebrow">Localisation</span>
               <h2>Oulad Teima / Souss-Massa</h2>
               <p>
-                N° 02 Kissariat El Hanaa, Boulevard Mohammed V, Oulad Teima,
-                Morocco
+                Oulad Teima, Région Souss-Massa, Maroc
               </p>
             </div>
 
             <div className="map-frame">
               <iframe
-                title="Kassib Group Location"
+                title="Localisation KASSIB GROUP"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.4480151326948!2d-9.210752621520669!3d30.395028388387356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3b6bf7ce0583d%3A0xf2532b7ac6e50342!2sAv.%20Mohammed%20V%2C%20Oulad%20Teima!5e0!3m2!1sen!2sma!4v1781876332265!5m2!1sen!2sma"
                 loading="lazy"
                 allowFullScreen

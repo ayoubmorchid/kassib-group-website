@@ -1,61 +1,62 @@
 import {
   Building2,
-  Bus,
   ClipboardCheck,
   Hammer,
   HardHat,
   PackageCheck,
   Route,
+  Wrench,
 } from "lucide-react";
 
 export const services = [
   {
-    icon: HardHat,
-    title: "Public Works & Civil Construction",
+    icon: Building2,
+    title: "Construction métallique",
     description:
-      "Execution and coordination of civil works for public facilities, local authorities, and regional development programs.",
-    highlights: ["Gros oeuvre", "Concrete works", "Site execution"],
+      "Conception, fabrication, assemblage et installation d'ouvrages métalliques adaptés aux besoins des professionnels.",
+    highlights: ["Structures", "Charpentes", "Sur mesure"],
   },
   {
     icon: Hammer,
-    title: "Rehabilitation & Building Finishing",
+    title: "Soudure et assemblage",
     description:
-      "Rehabilitation of schools and public buildings, including waterproofing, flooring, carpentry, painting, glazing, and finishing works.",
-    highlights: ["Rehabilitation", "Etancheite", "Revetement"],
+      "Travaux de soudure, d'assemblage et de préparation de pièces métalliques pour différents besoins techniques.",
+    highlights: ["Soudure", "Montage", "Exécution"],
+  },
+  {
+    icon: HardHat,
+    title: "Travaux divers et spécialisés",
+    description:
+      "Réalisation de travaux techniques, travaux de construction et prestations adaptées aux projets professionnels.",
+    highlights: ["Travaux divers", "Chantiers", "Technique"],
   },
   {
     icon: Route,
-    title: "Roads & Urban Infrastructure",
+    title: "Signalétique",
     description:
-      "Construction and improvement of local road links, walkways, concrete alleys, drainage networks, and urban public spaces.",
-    highlights: ["Road links", "Drainage", "Urban works"],
+      "Fabrication de solutions de signalétique pour entreprises, espaces professionnels et infrastructures.",
+    highlights: ["Panneaux", "Signalisation", "Supports"],
   },
   {
-    icon: Building2,
-    title: "Water, Sanitation & Technical Networks",
+    icon: Wrench,
+    title: "Fabrication technique",
     description:
-      "Works related to water storage, sanitation, plumbing, electrical networks, protection boards, lighting, and technical maintenance.",
-    highlights: ["Water basins", "Plumbing", "Electricity"],
+      "Réalisation de fabrications techniques et d'ouvrages métalliques selon les contraintes du projet.",
+    highlights: ["Préparation", "Ouvrages", "Adaptation"],
   },
   {
     icon: PackageCheck,
-    title: "Municipal Supplies & Equipment",
+    title: "Fourniture et négoce",
     description:
-      "Supply of municipal and community equipment such as waste bins, motor pumps, maintenance tools, signage, and operational assets.",
-    highlights: ["Equipment", "Supplies", "Delivery"],
+      "Fourniture, négoce, services techniques et accompagnement des besoins professionnels en équipements et solutions.",
+    highlights: ["Fourniture", "Négoce", "Services"],
   },
   {
     icon: ClipboardCheck,
-    title: "Tender Tracking & Administrative Files",
+    title: "Développement industriel",
     description:
-      "Preparation and follow-up of estimates, attachments, invoices, purchase orders, stock, supplier situations, and public tender files.",
-    highlights: ["Devis", "Attachements", "Tenders"],
-  },
-  {
-    icon: Bus,
-    title: "Community Mobility & Essential Services",
-    description:
-      "Support for public-interest acquisitions and service projects, including ambulances, local equipment, and practical community needs.",
-    highlights: ["Ambulance", "Local service", "Public value"],
+      "Renforcement progressif des capacités de fabrication et de transformation métallique dans le cadre d'une ambition industrielle.",
+    highlights: ["Projet futur", "Capacités", "Industrialisation"],
+    future: true,
   },
 ];

@@ -10,11 +10,11 @@ export default function ServicesSection() {
       <div className="container">
         <div className="section-heading-row">
           <SectionTitle
-            eyebrow="What We Do"
-            title="Services aligned with public works and municipal needs."
+            eyebrow="Nos métiers"
+            title="Des services orientés construction métallique et travaux techniques."
           />
           <Link to="/services" className="text-link">
-            All services <ArrowRight size={16} />
+            Tous les services <ArrowRight size={16} />
           </Link>
         </div>
         <div className="row g-4">

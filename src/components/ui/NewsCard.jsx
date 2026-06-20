@@ -15,7 +15,7 @@ export default function NewsCard({ article, featured = false }) {
         <h3>{article.title}</h3>
         <p>{article.summary}</p>
         <span className="card-link">
-          Read insight <ArrowRight size={14} />
+          Lire l'information <ArrowRight size={14} />
         </span>
       </div>
     </Card>

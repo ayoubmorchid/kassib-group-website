@@ -5,19 +5,19 @@ export default function NotFound() {
   return (
     <>
       <SEO
-        title="Page Not Found | Kassib Group"
-        description="The requested Kassib Group website page could not be found. Return home or contact the team for assistance."
+        title="Page introuvable | KASSIB GROUP"
+        description="La page demandée sur le site KASSIB GROUP est introuvable. Retournez à l'accueil ou contactez l'entreprise."
         path="/404"
       />
       <Hero
         compact
         eyebrow="404"
-        title="Page Not Found"
-        text="The page you are looking for does not exist."
+        title="Page introuvable"
+        text="La page que vous recherchez n'existe pas."
         image="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1500&h=800&fit=crop&auto=format"
-        primaryLabel="Back Home"
+        primaryLabel="Retour à l'accueil"
         primaryTo="/"
-        secondaryLabel="Contact Us"
+        secondaryLabel="Nous contacter"
         secondaryTo="/contact"
       />
     </>

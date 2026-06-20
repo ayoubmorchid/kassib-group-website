@@ -184,6 +184,24 @@
   line-height: 1.7;
 }
 
+.about-values {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.about-values span {
+  padding: 8px 12px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
 @media (max-width: 768px) {
   .mission-card {
     padding: 24px;

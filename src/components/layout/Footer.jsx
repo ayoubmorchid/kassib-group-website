@@ -15,25 +15,25 @@ export default function Footer() {
               <img src="/logo.png" alt="Kassib Group" />
             </Link>
             <p>
-              Kassib Group works across public works, construction,
-              rehabilitation, local infrastructure, municipal equipment, and
-              tender follow-up in Morocco.
+              KASSIB GROUP développe des solutions métalliques, techniques et
+              industrielles pour les professionnels à Oulad Teima et dans la
+              région Souss-Massa.
             </p>
             <div className="social-links">
-              <a href={company.emailHref} aria-label="Email Kassib Group">
+              <a href={company.emailHref} aria-label="Envoyer un email à KASSIB GROUP">
                 <Mail size={17} />
               </a>
-              <a href={company.phoneHref} aria-label="Call Kassib Group">
+              <a href={company.phoneHref} aria-label="Appeler KASSIB GROUP">
                 <Phone size={17} />
               </a>
-              <Link to="/contact" aria-label="Company contact page">
+              <Link to="/contact" aria-label="Page de contact KASSIB GROUP">
                 <Globe2 size={17} />
               </Link>
             </div>
           </div>
 
           <div className="col-6 col-lg-2">
-            <h3>Company</h3>
+            <h3>Entreprise</h3>
             <ul>
               {quickLinks.map((link) => (
                 <li key={link.href}>
@@ -65,10 +65,10 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <span>(c) 2026 Kassib Group. All Rights Reserved.</span>
+          <span>(c) 2026 KASSIB GROUP. Tous droits réservés.</span>
           <div>
-            <Link to="/privacy-policy">Privacy Policy</Link>
-            <Link to="/terms-of-service">Terms of Service</Link>
+            <Link to="/privacy-policy">Politique de confidentialité</Link>
+            <Link to="/terms-of-service">Conditions d'utilisation</Link>
           </div>
         </div>
       </div>
