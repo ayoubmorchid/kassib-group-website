@@ -1,56 +1,115 @@
-﻿.portfolio-band {
+.projects-overview-section .section-title {
+  margin-bottom: 28px;
+}
+
+.projects-grid {
+  row-gap: 28px;
+}
+
+.projects-overview-section .project-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
+}
+
+.projects-overview-section .project-card:hover {
+  box-shadow: 0 8px 22px rgba(17, 17, 17, 0.05);
+}
+
+.projects-overview-section .project-image {
+  flex: 0 0 190px;
+  height: 190px;
+  aspect-ratio: auto;
+  background: var(--soft);
+}
+
+.projects-overview-section .project-image img {
+  display: block;
+  object-position: center;
+}
+
+.projects-overview-section .project-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.projects-overview-section .project-body > p:last-child {
+  margin-bottom: 0;
+}
+
+.projects-overview-section .project-card h3 {
+  font-size: 1.05rem;
+}
+
+.portfolio-band {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  padding: 40px;
-  background: #111111;
-  color: #ffffff;
-  border-radius: 8px;
+  gap: 28px;
+  padding: 34px 0;
+  color: var(--ink);
+  background: #ffffff;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
 .portfolio-band p {
   margin-bottom: 8px;
-  color: #d71920;
+  color: var(--brand-red);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
 .portfolio-band h2 {
   max-width: 680px;
   margin: 0;
-  font-size: 32px;
+  font-size: clamp(1.45rem, 3vw, 2rem);
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.35;
 }
 
 .portfolio-metrics {
   display: grid;
-  gap: 12px;
-  min-width: 220px;
+  gap: 10px;
+  min-width: 230px;
 }
 
 .portfolio-metrics span {
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .portfolio-metrics strong {
-  color: #d71920;
-  font-size: 24px;
-  font-weight: 700;
+  color: var(--brand-red);
+  font-size: 22px;
+  font-weight: 800;
   margin-right: 6px;
 }
 
+.development-tags {
+  align-content: flex-start;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.development-tags span {
+  background: #ffffff;
+  border: 1px solid var(--line);
+}
+
 @media (max-width: 768px) {
+  .projects-overview-section .project-image {
+    flex-basis: 170px;
+    height: 170px;
+  }
+
   .portfolio-band {
     flex-direction: column;
     align-items: flex-start;
-    padding: 28px;
-  }
-
-  .portfolio-band h2 {
-    font-size: 26px;
+    padding: 28px 0;
   }
 
   .portfolio-metrics {

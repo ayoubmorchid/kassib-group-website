@@ -57,11 +57,10 @@ export default function About() {
       />
       <Hero
         compact
-        className="about-compact-hero"
         eyebrow="À propos"
-        title="KASSIB GROUP"
-        text="Entreprise basée à Oulad Teima, spécialisée dans la construction métallique, la soudure, la fabrication technique, la transformation métallique et les travaux spécialisés."
-        image="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1500&h=800&fit=crop&auto=format"
+        title="À propos"
+        text="Entreprise basée à Oulad Teima, spécialisée dans la construction métallique, la soudure et la fabrication technique."
+        image="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1500&h=800&fit=crop&auto=format"
       />
 
       <section className="section-padding about-overview">

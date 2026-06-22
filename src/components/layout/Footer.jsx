@@ -1,71 +1,76 @@
 import { Link } from "react-router-dom";
-import { Globe2, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { company, navLinks } from "../../data/company";
-import { services } from "../../data/services";
+
+const footerLinks = navLinks;
+
+const expertiseItems = [
+  "Construction métallique",
+  "Soudure",
+  "Fabrication technique",
+  "Travaux spécialisés",
+];
 
 export default function Footer() {
-  const quickLinks = navLinks.filter((link) => link.href !== "/");
+  const addressLines = company.addressLines ?? [company.location];
 
   return (
     <footer className="site-footer">
       <div className="container">
-        <div className="row g-4">
-          <div className="col-lg-4">
-            <Link to="/" className="footer-logo">
-              <img src="/logo.png" alt="Kassib Group" />
+        <div className="footer-main">
+          <div className="footer-brand">
+            <Link to="/" className="footer-logo" aria-label="Accueil KASSIB GROUP">
+              <img src="/logo.png" alt="KASSIB GROUP" />
             </Link>
             <p>
               KASSIB GROUP développe des solutions métalliques, techniques et
-              industrielles pour les professionnels à Oulad Teima et dans la
-              région Souss-Massa.
+              industrielles adaptées aux besoins des professionnels.
             </p>
-            <div className="social-links">
-              <a href={company.emailHref} aria-label="Envoyer un email à KASSIB GROUP">
-                <Mail size={17} />
-              </a>
-              <a href={company.phoneHref} aria-label="Appeler KASSIB GROUP">
-                <Phone size={17} />
-              </a>
-              <Link to="/contact" aria-label="Page de contact KASSIB GROUP">
-                <Globe2 size={17} />
-              </Link>
-            </div>
           </div>
 
-          <div className="col-6 col-lg-2">
-            <h3>Entreprise</h3>
+          <nav className="footer-links" aria-label="Navigation du pied de page">
+            <h3>Navigation</h3>
             <ul>
-              {quickLinks.map((link) => (
+              {footerLinks.map((link) => (
                 <li key={link.href}>
                   <Link to={link.href}>{link.label}</Link>
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
-          <div className="col-6 col-lg-3">
-            <h3>Services</h3>
+          <div className="footer-expertise">
+            <h3>Expertise</h3>
             <ul>
-              {services.slice(0, 6).map((service) => (
-                <li key={service.title}>
-                  <Link to="/services">{service.title}</Link>
-                </li>
+              {expertiseItems.map((item) => (
+                <li key={item}>{item}</li>
               ))}
             </ul>
           </div>
 
-          <div className="col-lg-3">
+          <address className="footer-contact">
             <h3>Contact</h3>
-            <div className="footer-contact">
-              <span><MapPin size={17} /> {company.location}</span>
-              <a href={company.phoneHref}><Phone size={17} /> {company.phone}</a>
-              <a href={company.emailHref}><Mail size={17} /> {company.email}</a>
+            <div>
+              <MapPin size={17} aria-hidden="true" />
+              <span>
+                {addressLines.map((line) => (
+                  <span key={line}>{line}</span>
+                ))}
+              </span>
             </div>
-          </div>
+            <a href={company.phoneHref}>
+              <Phone size={17} aria-hidden="true" />
+              {company.phone}
+            </a>
+            <a href={company.emailHref}>
+              <Mail size={17} aria-hidden="true" />
+              {company.email}
+            </a>
+          </address>
         </div>
 
         <div className="footer-bottom">
-          <span>(c) 2026 KASSIB GROUP. Tous droits réservés.</span>
+          <p>© 2026 KASSIB GROUP. Tous droits réservés.</p>
           <div>
             <Link to="/privacy-policy">Politique de confidentialité</Link>
             <Link to="/terms-of-service">Conditions d'utilisation</Link>

@@ -4,22 +4,17 @@
 
 .hero-section {
   position: relative;
-  min-height: 100vh;
+  min-height: 68vh;
   display: flex;
   align-items: center;
   overflow: hidden;
   background: var(--ink);
-  padding: 9rem 0 7rem;
+  padding: 6.5rem 0 4rem;
 }
 
 .hero-compact {
-  min-height: auto;
+  min-height: 488px;
   padding: 10rem 0 5.5rem;
-}
-
-.about-compact-hero .col-lg-8 {
-  flex: 0 0 auto;
-  width: 100%;
 }
 
 .hero-bg,
@@ -37,6 +32,10 @@
   opacity: 0.22;
   transform: scale(1.05);
   transition: transform 8s ease;
+}
+
+.hero-section:hover .hero-bg {
+  transform: scale(1.08);
 }
 
 .hero-overlay {
@@ -83,6 +82,7 @@
 
 .hero-section .section-eyebrow {
   margin-bottom: 1.25rem;
+  color: var(--brand-red);
 }
 
 .hero-section .section-title h1,
@@ -134,13 +134,14 @@
 ========================================================= */
 
 @media (max-width: 991px) {
-  .hero-section {
-    min-height: 850px;
-    padding: 8rem 0 5rem;
+  .hero-section:not(.hero-compact) {
+    min-height: 640px;
+    padding: 7.25rem 0 4.25rem;
   }
 
-  .about-compact-hero .col-lg-8 {
-    width: 100%;
+  .hero-section.hero-compact {
+    min-height: 460px;
+    padding: 8rem 0 4.5rem;
   }
 
   .hero-section .section-title h1,
@@ -150,9 +151,14 @@
 }
 
 @media (max-width: 768px) {
-  .hero-section {
-    min-height: 760px;
-    padding: 7rem 0 4rem;
+  .hero-section:not(.hero-compact) {
+    min-height: 600px;
+    padding: 6.75rem 0 3.75rem;
+  }
+
+  .hero-section.hero-compact {
+    min-height: 430px;
+    padding: 7.5rem 0 4rem;
   }
 
   .hero-section .section-title h1,
@@ -166,9 +172,14 @@
 }
 
 @media (max-width: 576px) {
-  .hero-section {
-    min-height: 700px;
-    padding: 6.5rem 0 3.5rem;
+  .hero-section:not(.hero-compact) {
+    min-height: 560px;
+    padding: 6.25rem 0 3.25rem;
+  }
+
+  .hero-section.hero-compact {
+    min-height: 400px;
+    padding: 7rem 0 3.5rem;
   }
 
   .hero-section .section-title h1,
@@ -183,5 +194,15 @@
   .hero-actions .btn,
   .hero-actions .brand-outline {
     width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg {
+    transition: none;
+  }
+
+  .hero-section:hover .hero-bg {
+    transform: scale(1.05);
   }
 }

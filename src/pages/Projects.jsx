@@ -5,6 +5,15 @@ import SectionTitle from "../components/ui/SectionTitle";
 import ProjectCard from "../components/ui/ProjectCard";
 import { projects } from "../data/projects";
 
+const futureCapabilities = [
+  "Découpe industrielle",
+  "Pliage industriel",
+  "Roulage",
+  "Usinage",
+  "Produits métalliques plus complexes",
+  "Solutions à plus forte valeur ajoutée",
+];
+
 export default function Projects() {
   return (
     <>
@@ -16,20 +25,20 @@ export default function Projects() {
       <Hero
         compact
         eyebrow="Domaines"
-        title="Domaines d'intervention"
+        title="Domaines"
         text="Une présentation sobre des domaines d'activité de KASSIB GROUP, sans créer de fausses références de projets."
-        image="https://images.unsplash.com/photo-1460472178825-e5240623afd5?w=1500&h=800&fit=crop&auto=format"
+        image="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1500&h=800&fit=crop&auto=format"
       />
 
-      <section className="section-padding bg-soft">
+      <section className="section-padding bg-soft projects-overview-section">
         <div className="container">
           <SectionTitle
             eyebrow="Activités"
             title="Des domaines techniques clairement identifiés."
-            text="Les éléments présentés ci-dessous décrivent des domaines d'intervention et non des chantiers, clients ou références non vérifiés."
+            text="Une lecture simple des principaux champs d'intervention de KASSIB GROUP, centrée sur les métiers réellement présentés par l'entreprise."
             align="center"
           />
-          <div className="row g-4 mt-2">
+          <div className="row g-4 mt-2 projects-grid">
             {projects.map((project) => (
               <div className="col-md-6" key={project.title}>
                 <ProjectCard project={project} />
@@ -44,12 +53,33 @@ export default function Projects() {
           <div className="portfolio-band">
             <div>
               <p>Approche</p>
-              <h2>Présenter les savoir-faire sans inventer de références permet de rester clair, professionnel et crédible.</h2>
+              <h2>Une présentation claire des métiers pour comprendre rapidement le périmètre technique de l'entreprise.</h2>
             </div>
             <div className="portfolio-metrics">
-              <span><strong>4</strong> Domaines présentés</span>
-              <span><strong>0</strong> Faux projet</span>
-              <span><strong>1</strong> Positionnement technique</span>
+              <span><strong>4</strong> Domaines d'intervention</span>
+              <span><strong>1</strong> Orientation technique</span>
+              <span><strong>+</strong> Développement industriel</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-soft">
+        <div className="container">
+          <div className="row g-4 align-items-start">
+            <div className="col-lg-5">
+              <SectionTitle
+                eyebrow="Capacités en développement"
+                title="Un périmètre futur présenté avec prudence."
+                text="Certains sujets relèvent du projet de développement industriel et ne sont pas présentés comme des capacités déjà entièrement opérationnelles."
+              />
+            </div>
+            <div className="col-lg-7">
+              <div className="tag-list development-tags">
+                {futureCapabilities.map((item) => (
+                  <span key={item}>{item}</span>
+                ))}
+              </div>
             </div>
           </div>
         </div>

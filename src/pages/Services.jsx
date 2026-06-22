@@ -14,6 +14,13 @@ const process = [
   ["04", "Suivre et améliorer", "Contrôle, ajustements, documentation et amélioration continue des pratiques."],
 ];
 
+const commitments = [
+  "Qualité des réalisations",
+  "Sécurité et prévention des risques",
+  "Organisation et traçabilité",
+  "Responsabilité et amélioration continue",
+];
+
 export default function Services() {
   return (
     <>
@@ -27,7 +34,7 @@ export default function Services() {
         eyebrow="Nos services"
         title="Services"
         text="Des prestations techniques orientées construction métallique, soudure, fabrication, signalétique, travaux spécialisés, fourniture et négoce."
-        image="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1500&h=800&fit=crop&auto=format"
+        image="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1500&h=800&fit=crop&auto=format"
       />
 
       <section className="section-padding">
@@ -88,13 +95,29 @@ export default function Services() {
             <div className="col-lg-6">
               <div className="image-frame">
                 <img
-                  src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&h=700&fit=crop&auto=format"
-                  alt="Professionnels analysant un projet technique"
+                  src="/images/project-industrial-development.png"
+                  alt="Atelier industriel de fabrication métallique"
                   loading="lazy"
                   decoding="async"
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-soft">
+        <div className="container">
+          <SectionTitle
+            eyebrow="Engagements"
+            title="Une démarche orientée qualité, sécurité et responsabilité."
+            text="KASSIB GROUP souhaite structurer progressivement ses pratiques selon les bonnes pratiques du secteur, sans revendiquer de certification non confirmée."
+            align="center"
+          />
+          <div className="about-values">
+            {commitments.map((item) => (
+              <span key={item}>{item}</span>
+            ))}
           </div>
         </div>
       </section>

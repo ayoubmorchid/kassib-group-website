@@ -1,10 +1,15 @@
 export const company = {
   name: "KASSIB GROUP",
   location: "Oulad Teima, Région Souss-Massa, Maroc",
+  addressLines: [
+    "N° 02 Kissariat El Hanaa,",
+    "Avenue Mohammed V, Oulad Teima",
+    "Région Souss-Massa, Maroc",
+  ],
   phone: "+212 6 00 00 00 00",
   phoneHref: "tel:+212600000000",
-  email: "contact@kassibgroup.com",
-  emailHref: "mailto:contact@kassibgroup.com",
+  email: "contact@kassibgroup.ma",
+  emailHref: "mailto:contact@kassibgroup.ma",
   hours: "Du lundi au vendredi / 9:00 - 18:00",
 };
 
