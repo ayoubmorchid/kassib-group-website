@@ -57,7 +57,6 @@ export default function About() {
       />
       <Hero
         compact
-        eyebrow="À propos"
         title="À propos"
         text="Entreprise basée à Oulad Teima, spécialisée dans la construction métallique, la soudure et la fabrication technique."
         image="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1500&h=800&fit=crop&auto=format"

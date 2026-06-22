@@ -24,7 +24,6 @@ export default function Projects() {
       />
       <Hero
         compact
-        eyebrow="Domaines"
         title="Domaines"
         text="Une présentation sobre des domaines d'activité de KASSIB GROUP, sans créer de fausses références de projets."
         image="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1500&h=800&fit=crop&auto=format"

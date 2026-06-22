@@ -19,7 +19,6 @@ export default function News() {
       />
       <Hero
         compact
-        eyebrow="Actualités"
         title="Actualités"
         text="Les informations officielles de KASSIB GROUP seront publiées lorsqu'elles seront disponibles et confirmées."
         image="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1500&h=800&fit=crop&auto=format"

@@ -75,7 +75,6 @@ export default function Contact() {
       />
       <Hero
         compact
-        eyebrow="Contact"
         title="Contact"
         text="Contactez KASSIB GROUP pour discuter d'un besoin technique, métallique ou industriel."
         image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1500&h=800&fit=crop&auto=format"

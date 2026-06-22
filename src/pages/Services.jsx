@@ -31,7 +31,6 @@ export default function Services() {
       />
       <Hero
         compact
-        eyebrow="Nos services"
         title="Services"
         text="Des prestations techniques orientées construction métallique, soudure, fabrication, signalétique, travaux spécialisés, fourniture et négoce."
         image="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1500&h=800&fit=crop&auto=format"

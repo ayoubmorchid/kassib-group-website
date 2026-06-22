@@ -42,7 +42,6 @@ export default function Home() {
         description="KASSIB GROUP accompagne les professionnels dans leurs projets de construction métallique, soudure, fabrication technique et travaux spécialisés à Oulad Teima et dans la région Souss-Massa."
       />
       <Hero
-        eyebrow="Construction métallique & fabrication technique"
         title="Des solutions métalliques conçues pour durer"
         text="KASSIB GROUP accompagne les professionnels dans leurs projets de construction métallique, de soudure, de fabrication technique et de travaux spécialisés à Oulad Teima et dans la région Souss-Massa."
         image="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1800&h=1100&fit=crop&auto=format"
