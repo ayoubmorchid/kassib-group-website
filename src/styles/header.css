@@ -136,9 +136,92 @@
   box-shadow: none;
 }
 
-.nav-cta {
+.nav-contact-menu {
+  position: relative;
+  padding-left: 0;
+  margin-left: 12px;
+}
+
+.nav-contact-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   min-height: 42px;
-  padding-inline: 18px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.site-header.is-scrolled .nav-contact-trigger {
+  color: var(--ink);
+}
+
+.nav-contact-trigger:hover,
+.nav-contact-trigger:focus,
+.nav-contact-trigger:active {
+  color: var(--brand-red) !important;
+}
+
+.nav-contact-trigger:focus-visible {
+  outline: 2px solid var(--brand-red);
+  outline-offset: 4px;
+}
+
+.nav-contact-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: max-content;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-3px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.nav-contact-menu:hover .nav-contact-dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.nav-contact-menu:focus-within .nav-contact-dropdown {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-contact-menu:focus-within:hover .nav-contact-dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.nav-contact-dropdown a {
+  position: relative;
+  display: block;
+  padding: 4px 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.nav-contact-dropdown a:hover,
+.nav-contact-dropdown a:focus-visible {
+  color: var(--brand-red);
+  background: transparent;
+}
+
+.site-header.is-scrolled .nav-contact-dropdown a,
+.site-header.is-scrolled .nav-contact-dropdown a:hover,
+.site-header.is-scrolled .nav-contact-dropdown a:focus-visible {
+  color: var(--brand-red);
 }
 
 /* Mobile */
@@ -177,8 +260,38 @@
     color: var(--ink);
   }
 
-  .nav-cta {
+  .nav-contact-menu {
     width: 100%;
     margin-top: 10px;
+    margin-left: 0;
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .nav-contact-trigger {
+    color: var(--ink);
+  }
+
+  .nav-contact-dropdown {
+    position: static;
+    display: block;
+    min-width: 0;
+    margin-top: 8px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  .nav-contact-menu:focus-within .nav-contact-dropdown {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-contact-dropdown a {
+    padding: 10px 0;
   }
 }

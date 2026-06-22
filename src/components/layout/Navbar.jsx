@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { navLinks } from "../../data/company";
-import Button from "../ui/Button";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -59,9 +58,17 @@ export default function Navbar() {
               ))}
             </ul>
 
-            <Button to="/contact" className="nav-cta" onClick={() => setMobileOpen(false)}>
-              Nous contacter
-            </Button>
+            <div className="nav-contact-menu">
+              <Link to="/contact" className="nav-contact-trigger" onClick={() => setMobileOpen(false)}>
+                Nous contacter
+                <ChevronDown size={15} aria-hidden="true" />
+              </Link>
+              <div className="nav-contact-dropdown">
+                <Link to="/careers" onClick={() => setMobileOpen(false)}>
+                  Carrières
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
