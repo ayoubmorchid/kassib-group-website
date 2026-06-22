@@ -19,9 +19,23 @@
 
 .hero-bg,
 .hero-overlay,
+.hero-section::before,
 .hero-accent {
   position: absolute;
   inset: 0;
+}
+
+.hero-section::before {
+  z-index: 1;
+  pointer-events: none;
+  content: "";
+  background: radial-gradient(
+    circle at 8% 8%,
+    rgba(255, 255, 255, 0.26) 0%,
+    rgba(255, 255, 255, 0.14) 12%,
+    rgba(255, 255, 255, 0.04) 24%,
+    transparent 38%
+  );
 }
 
 .hero-bg {

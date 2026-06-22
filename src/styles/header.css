@@ -41,7 +41,9 @@
   color: rgba(255, 255, 255, 0.86);
   font-size: 0.9rem;
   font-weight: 600;
-  transition: color 0.2s ease;
+  background: transparent !important;
+  border-radius: 4px;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .site-header.is-scrolled .nav-link {
@@ -49,8 +51,24 @@
 }
 
 .nav-link:hover,
-.nav-link.active {
-  color: var(--brand-red);
+.nav-link:focus,
+.nav-link:active,
+.nav-link.active,
+.nav-link.show,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: var(--brand-red) !important;
+  background: transparent !important;
+}
+
+.nav-link:focus {
+  box-shadow: none;
+}
+
+.nav-link:focus-visible {
+  color: var(--brand-red) !important;
+  outline: 2px solid var(--brand-red);
+  outline-offset: 3px;
 }
 
 .navbar-toggler {
@@ -91,10 +109,14 @@
 }
 
 .btn-brand:hover,
-.btn-brand:focus {
+.btn-brand:focus,
+.btn-brand:active,
+.btn-brand.active,
+.btn-brand.show {
   background: var(--brand-red-dark);
   border-color: var(--brand-red-dark);
-  color: #ffffff;
+  color: #ffffff !important;
+  box-shadow: none;
 }
 
 .btn-dark-brand {
@@ -104,10 +126,14 @@
 }
 
 .btn-dark-brand:hover,
-.btn-dark-brand:focus {
+.btn-dark-brand:focus,
+.btn-dark-brand:active,
+.btn-dark-brand.active,
+.btn-dark-brand.show {
   background: #2a2a2a;
   border-color: #2a2a2a;
-  color: #ffffff;
+  color: #ffffff !important;
+  box-shadow: none;
 }
 
 .nav-cta {

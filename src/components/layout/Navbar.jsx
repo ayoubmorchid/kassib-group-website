@@ -7,6 +7,7 @@ import Button from "../ui/Button";
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const mainNavLinks = navLinks.filter((link) => link.href !== "/contact");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 32);
@@ -20,7 +21,10 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-lg">
         <div className="container">
           <Link to="/" className="navbar-brand" onClick={() => setMobileOpen(false)}>
-            <img src="/logo.png" alt="Kassib Group" />
+            <img
+              src={scrolled || mobileOpen ? "/logo.png" : "/logo-navbar.png"}
+              alt="Kassib Group"
+            />
           </Link>
 
           <button
@@ -39,7 +43,7 @@ export default function Navbar() {
             className={`collapse navbar-collapse ${mobileOpen ? "show" : ""}`}
           >
             <ul className="navbar-nav mx-auto">
-              {navLinks.map((link) => (
+              {mainNavLinks.map((link) => (
                 <li className="nav-item" key={link.href}>
                   <NavLink
                     to={link.href}
