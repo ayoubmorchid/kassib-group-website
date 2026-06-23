@@ -6,6 +6,7 @@ import Services from "../pages/Services.jsx";
 import Projects from "../pages/Projects.jsx";
 import News from "../pages/News.jsx";
 import Contact from "../pages/Contact.jsx";
+import Careers from "../pages/Careers.jsx";
 import PrivacyPolicy from "../pages/PrivacyPolicy.jsx";
 import TermsOfService from "../pages/TermsOfService.jsx";
 import NotFound from "../pages/NotFound.jsx";
@@ -31,6 +32,7 @@ export default function AppRouter() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/news" element={<News />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/careers" element={<Careers />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="*" element={<NotFound />} />

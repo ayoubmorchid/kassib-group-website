@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { company, navLinks } from "../../data/company";
 
-const footerLinks = navLinks;
+const footerLinks = [...navLinks, { label: "Carrières", href: "/careers" }];
 
 const expertiseItems = [
   "Construction métallique",

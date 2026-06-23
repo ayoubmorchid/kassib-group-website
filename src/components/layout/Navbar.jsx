@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { BriefcaseBusiness, ChevronDown, Mail, Menu, X } from "lucide-react";
 import { navLinks } from "../../data/company";
 
 export default function Navbar() {
@@ -58,15 +58,38 @@ export default function Navbar() {
               ))}
             </ul>
 
-            <div className="nav-contact-menu">
-              <Link to="/contact" className="nav-contact-trigger" onClick={() => setMobileOpen(false)}>
-                Nous contacter
+            <div className="nav-contact-menu" aria-label="Contact et carrières">
+              <button type="button" className="nav-contact-trigger">
+                Contact
                 <ChevronDown size={15} aria-hidden="true" />
-              </Link>
+              </button>
               <div className="nav-contact-dropdown">
-                <Link to="/careers" onClick={() => setMobileOpen(false)}>
-                  Carrières
-                </Link>
+                <NavLink
+                  to="/contact"
+                  onClick={() => setMobileOpen(false)}
+                  className={({ isActive }) =>
+                    `nav-contact-item ${isActive ? "active" : ""}`
+                  }
+                >
+                  <Mail size={17} aria-hidden="true" />
+                  <span>
+                    <strong>Nous contacter</strong>
+                    <small>Demande ou projet</small>
+                  </span>
+                </NavLink>
+                <NavLink
+                  to="/careers"
+                  onClick={() => setMobileOpen(false)}
+                  className={({ isActive }) =>
+                    `nav-contact-item ${isActive ? "active" : ""}`
+                  }
+                >
+                  <BriefcaseBusiness size={17} aria-hidden="true" />
+                  <span>
+                    <strong>Carrières</strong>
+                    <small>Candidature spontanée</small>
+                  </span>
+                </NavLink>
               </div>
             </div>
           </div>
